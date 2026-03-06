@@ -27,4 +27,20 @@ def registrar_notas():
         print("Notas actualizadas correctamente")
     else:
         print("El estudiante no se encuentra registrado")
+
+def ver_promedio():
+    id_busqueda = input("Ingrese la identifcación de estudiante para ver e promedio: ")
+        
+    if id_busqueda in estudiantes:
+        estudiante = estudiantes[id_busqueda]
+        nota1 = estudiante["nota1"]
+        nota2 = estudiante["nota2"]
+
+        promedio = (nota1 + nota2) / 2
+
+        print(f"\nEstudiante: {estudiante['nombre']}")
+        print(f"\nEl promedio es: {promedio:.2f}")
+    else:
+         print("El estudiante no está registrado")
+
         
